@@ -1,6 +1,6 @@
 {
   "name": "ngx-uid",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An Angular 4+ unique id directive and service",
   "main": "./bundles/ngx-uid.umd.js",
   "module": "./ngx-uid.es5.js",
