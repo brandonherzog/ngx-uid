@@ -1,0 +1,40 @@
+<form>
+  <!-- directive -->
+  <div ngxUid #labelId="ngxUid">Favorite Star Wars Movie?</div>
+  <div role="radiogroup" [attr.aria-labelledby]="labelId">
+    <div *ngFor="let movie of movies">
+      <input ngxUid #inputId="ngxUid" type="radio" name="movie" [value]="movie">
+      <label [for]="inputId">{{ movie }}</label>
+    </div>
+  </div>
+
+  <!-- service -->
+  <div>
+    <label [for]="bestLabelId">Best Movie Ever?</label>
+    <input [id]="bestLabelId" type="text">
+  </div>
+  <div>
+    <label [for]="worstLabelId">Worst Movie Ever?</label>
+    <input [id]="worstLabelId" type="text">
+  </div>
+</form>
+
+<!-- <form>
+  <h4 #label ngxUid>Favorite Star Wars Movie?</h4>
+  <div role="radiogroup" [attr.aria-labelledby]="label.id">
+    <div *ngFor="let movie of movies">
+      <input #input ngxUid type="radio" name="movie" [value]="movie">
+      <label [for]="input.id">{{ movie }}</label>
+    </div>
+  </div>
+</form> -->
+
+<!-- <form>
+  <h4 [id]="groupLabelId">Favorite Star Wars Movie?</h4>
+  <div role="radiogroup" [attr.aria-labelledby]="labelId">
+    <div *ngFor="let movie of movies">
+      <input #input ngxUid type="radio" name="movie" [value]="movie">
+      <label [for]="input.id">{{ movie }}</label>
+    </div>
+  </div>
+</form> -->
