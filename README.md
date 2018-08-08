@@ -61,6 +61,17 @@ export class AppComponent {
 }
 ```
 
+You may also use the `NgxUidNoBindDirective` (`ngxUidNoBind`) to create a unique id in the template without automatically
+binding it to the host element's id.
+
+```
+<!-- directive no binding -->
+<div id="notBound" #myDiv ngxUidNoBind #myId="ngxUidNoBind">
+  <div>Here is the div id: {{myDiv.id}}</div>
+  <div>Here is what a unique id looks like: {{myId}}</div>
+</div>
+```
+
 ### 4. (Optional) Configure the `NgxUidService`:
 
 The default `NgxUidService` provides simple incrementing id values.

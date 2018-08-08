@@ -19,22 +19,8 @@
   </div>
 </form>
 
-<!-- <form>
-  <h4 #label ngxUid>Favorite Star Wars Movie?</h4>
-  <div role="radiogroup" [attr.aria-labelledby]="label.id">
-    <div *ngFor="let movie of movies">
-      <input #input ngxUid type="radio" name="movie" [value]="movie">
-      <label [for]="input.id">{{ movie }}</label>
-    </div>
-  </div>
-</form> -->
-
-<!-- <form>
-  <h4 [id]="groupLabelId">Favorite Star Wars Movie?</h4>
-  <div role="radiogroup" [attr.aria-labelledby]="labelId">
-    <div *ngFor="let movie of movies">
-      <input #input ngxUid type="radio" name="movie" [value]="movie">
-      <label [for]="input.id">{{ movie }}</label>
-    </div>
-  </div>
-</form> -->
+<!-- directive no binding -->
+<div id="notBound" #myDiv ngxUidNoBind #myId="ngxUidNoBind">
+  <div>Here is the div id: {{myDiv.id}}</div>
+  <div>Here is what a unique id looks like: {{myId}}</div>
+</div>
